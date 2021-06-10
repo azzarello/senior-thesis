@@ -1,0 +1,66 @@
+\chapter{System Evaluation}
+
+\section{System Evaluation}
+\subsection{Computer Vision Performance}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+Model                             & Application                            & Power Profile & Inference Speed & Power Consumption & GPU Latency & GPU Load & CPU Load \\ \hline
+\multirow{2}{*}{Inception v4}     & \multirow{6}{*}{Classification}        & 5W            & 10.58 FPS       & 5.029 W           & 94.477 ms   & 56.16\%  & 85.03\%  \\ \cline{3-8} 
+                                  &                                        & 10W           & 10.60 FPS       & 5.570 W           & 94.340 ms   & 70.30\%  & 40.31\%  \\ \cline{1-1} \cline{3-8} 
+\multirow{2}{*}{VGG-19}           &                                        & 5W            & 10.09 FPS       & 5.150 W           & 99.121 ms   & 58.92\%  & 84.74\%  \\ \cline{3-8} 
+                                  &                                        & 10W           & 10.04 FPS       & 5.004 W           & 99.596 ms   & 39.79\%  & 49.45\%  \\ \cline{1-1} \cline{3-8} 
+\multirow{2}{*}{ResNet 50}        &                                        & 5W            & 36.67 FPS       & 5.029 W           & 27.268 ms   & 54.56\%  & 86.90\%  \\ \cline{3-8} 
+                                  &                                        & 10W           & 36.88 FPS       & 5.564 W           & 27.116 ms   & 63.80\%  & 41.56\%  \\ \hline
+\multirow{2}{*}{SSD Mobilenet v1} & \multirow{4}{*}{Object Detection}      & 5W            & 42.56 FPS       & 4.360 W           & 23.498 ms   & 58.49\%  & 94.82\%  \\ \cline{3-8} 
+                                  &                                        & 10W           & 42.64 FPS       & 5.097 W           & 23.454 ms   & 77.88\%  & 44.77\%  \\ \cline{1-1} \cline{3-8} 
+\multirow{2}{*}{TinyYolo v3}      &                                        & 5W            & 47.65 FPS       & 3.541 W           & 20.987 ms   & 14.25\%  & 95.31\%  \\ \cline{3-8} 
+                                  &                                        & 10W           & 47.60 FPS       & 4.325 W           & 21.008 ms   & 24.64\%  & 50.62\%  \\ \hline
+\multirow{2}{*}{UNet}             & \multirow{2}{*}{Semantic Segmentation} & 5W            & 16.59 FPS       & 3.281 W           & 60.266 ms   & 0.45\%   & 92.68\%  \\ \cline{3-8} 
+                                  &                                        & 10W           & 16.62 FPS       & 5.882 W           & 60.177 ms   & 89.76\%  & 36.53\%  \\ \hline
+\multirow{2}{*}{Super Resolution} & \multirow{2}{*}{Image Processing}      & 5W            & 15.26 FPS       & 6.396 W           & 65.524 ms   & 86.82\%  & 78.00\%  \\ \cline{3-8} 
+                                  &                                        & 10W           & 15.26 FPS       & 5.943 W           & 65.547 ms   & 82.51\%  & 36.94\%  \\ \hline
+\multirow{2}{*}{OpenPose}         & \multirow{2}{*}{Pose Estimation}       & 5W            & 14.64 FPS       & 3.258 W           & 68.313 ms   & 0.26\%   & 92.46\%  \\ \cline{3-8} 
+                                  &                                        & 10W           & 14.64 FPS       & 3.968 W           & 68.320 ms   & 0.00\%   & 46.42\%  \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+\subsection{Price}
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+% \resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Product}           & \textbf{Price} \\ \hline
+NVIDIA Jetson Nano 4 GB    & \$120          \\ \hline
+HolyBro S500 v2 Kit        & \$355          \\ \hline
+Pixhawk 4                  & \$70           \\ \hline
+8000mAh Battery \& Charger & \$270          \\ \hline
+IMX219-77 Camera           & \$20           \\ \hline
+\textbf{Total}             & \textbf{\$835} \\ \hline
+\end{tabular}%
+% }
+\end{table}
+
+\subsection{Comparison}
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|l|l|}
+\cline{2-3}
+                                                 & \textbf{Prototype}                & \textbf{Industry Standard Averages} \\ \hline
+\multicolumn{1}{|l|}{\textbf{Flight Time}}       & 25.7 min                          & 31.5 min                            \\ \hline
+\multicolumn{1}{|l|}{\textbf{Computer Vision}}   & Real-time up to $\sim$480p 45 fps & No                                  \\ \hline
+\multicolumn{1}{|l|}{\textbf{Autonomous Flight}} & Yes                               & Yes                                 \\ \hline
+\multicolumn{1}{|l|}{\textbf{Modularity}}        & High                              & Minimal                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Price}}             & \$835                             & \$6,750                             \\ \hline
+\end{tabular}%
+}
+\end{table}

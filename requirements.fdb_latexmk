@@ -1,0 +1,13 @@
+# Fdb version 3
+["pdflatex"] 1623132898 "requirements.tex" "requirements.pdf" "requirements" 1623132898
+  "/etc/texmf/web2c/texmf.cnf" 1609798418 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1596975543 38841 5237427e4d3283e7b009b6a8b45dfdcd ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1596975543 38841 5237427e4d3283e7b009b6a8b45dfdcd ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1609798531 2443422 1fe6f3781e600275f54b2ad467ad690a ""
+  "requirements.aux" 1623132898 1797 4e75d50d70206ef4b96e629ad04d1ebd ""
+  "requirements.tex" 1623132830 3208 fbcfb5ef63f1cc844df8dc6e6e4c5971 ""
+  (generated)
+  "requirements.pdf"
+  "requirements.log"

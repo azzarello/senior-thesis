@@ -1,0 +1,17 @@
+Model,Application,Power Profile,Inference Speed,Power Consumption,GPU Latency,GPU Load,CPU Load
+Inception v4,Classification,5W,10.58 FPS,5.029 W,94.477 ms,56.16%,85.03%
+,,10W,10.60 FPS,5.570 W,94.340 ms,70.30%,40.31%
+VGG-19,,5W,10.09 FPS,5.150 W,99.121 ms,58.92%,84.74%
+,,10W,10.04 FPS,5.004 W,99.596 ms,39.79%,49.45%
+ResNet 50,,5W,36.67 FPS,5.029 W,27.268 ms,54.56%,86.90%
+,,10W,36.88 FPS,5.564 W,27.116 ms,63.80%,41.56%
+SSD Mobilenet v1,Object Detection,5W,42.56 FPS,4.360 W,23.498 ms,58.49%,94.82%
+,,10W,42.64 FPS,5.097 W,23.454 ms,77.88%,44.77%
+TinyYolo v3,,5W,47.65 FPS,3.541 W,20.987 ms,14.25%,95.31%
+,,10W,47.60 FPS,4.325 W,21.008 ms,24.64%,50.62%
+UNet,Semantic Segmentation,5W,16.59 FPS,3.281 W,60.266 ms,0.45%,92.68%
+,,10W,16.62 FPS,5.882 W,60.177 ms,89.76%,36.53%
+Super Resolution,Image Processing,5W,15.26 FPS,6.396 W,65.524 ms,86.82%,78.00%
+,,10W,15.26 FPS,5.943 W,65.547 ms,82.51%,36.94%
+OpenPose,Pose Estimation,5W,14.64 FPS,3.258 W,68.313 ms,0.26%,92.46%
+,,10W,14.64 FPS,3.968 W,68.320 ms,0.00%,46.42%

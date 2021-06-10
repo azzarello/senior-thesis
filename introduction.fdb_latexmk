@@ -1,0 +1,13 @@
+# Fdb version 3
+["pdflatex"] 1623342975 "introduction.tex" "introduction.pdf" "introduction" 1623342975
+  "/etc/texmf/web2c/texmf.cnf" 1609798418 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1596975543 38841 5237427e4d3283e7b009b6a8b45dfdcd ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1596975543 38841 5237427e4d3283e7b009b6a8b45dfdcd ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1609798531 2443422 1fe6f3781e600275f54b2ad467ad690a ""
+  "introduction.aux" 1623342974 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "introduction.tex" 1623341286 7085 e4b7405cef185f3f082151fd21ba8763 ""
+  (generated)
+  "introduction.pdf"
+  "introduction.log"

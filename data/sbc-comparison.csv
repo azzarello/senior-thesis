@@ -1,0 +1,13 @@
+Model,Application,Framework,NVIDIA Jetson Nano,Raspberry Pi 3,"Raspberry Pi 3 +
+Intel Neural Compute Stick 2","Google Edge
+TPU Dev Board"
+ResNet-50,Classification,TensorFlow,36 FPS,1.4 FPS,16 FPS,-
+MobileNet-v2,Classification,TensorFlow,64 FPS,2.5 FPS,30 FPS,130 FPS
+SSD ResNet-18,Object Detection,TensorFlow,18 FPS,-,-,-
+SSD Mobilenet-V2,Object Detection,TensorFlow,39 FPS,1 FPS,11 FPS,48 FPS
+Inception V4,Classification,PyTorch,11 FPS,-,-,9 FPS
+Tiny YOLO V3,Object Detection,Darknet,25 FPS,0.5 FPS,-,-
+OpenPose,Pose Estimation,Caffe,14 FPS,-,5 FPS,-
+VGG-19,Classification,MXNet,10 FPS,0.5 FPS,5 FPS,-
+Super Resolution,Image Processing,PyTorch,15 FPS,-,0.6 FPS,-
+Unet,Segmentation,Caffe,18 FPS,-,5 FPS,-
