@@ -335,12 +335,14 @@
 % There should be no need to do such things with IEEEtran.cls V1.6 and later.
 % (Unless specifically asked to do so by the journal or conference you plan
 % to submit to, of course. )
+\UseRawInputEncoding % THIS MAY BE DANGEROUS
 \documentclass{scu-thesis}
 \usepackage{amsmath}	% for advanced typesetting of mathematics
 \usepackage{graphicx}	% for including graphics
-\usepackage{natbib}	% for better citation styles
+\usepackage[numbers]{natbib}	% for better citation styles
 \usepackage{txfonts}	% for using the Times-Roman font
 \usepackage{multirow}
+\bibliographystyle{ieeetr}
 
 
 % These must be set first ... the rest of the thesis commands rely on them.
@@ -373,12 +375,12 @@
 
 \mainmatter
 \include{introduction}
-\include{related-works}
 \include{requirements}
 \include{use-cases}
 \include{proposed-solution}
 \include{system-evaluation}
 
 \backmatter
-% \bibliography{bibliography}
+\bibliography{bibliography}
+% APPENDIX
 \end{document}

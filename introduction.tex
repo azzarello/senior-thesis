@@ -2,12 +2,37 @@
 %P1: INTRODUCTION
 % - Disaster types and cost and frequency
 % - include some numbers (economic loss etc)
-\section{Introduction}
-\subsection{Motivation}
+\section{Motivation}
 % S1: MOTIVATION = "Disasters have major economic impact and they are increasingly common!"
 Natural and human-caused disasters can cripple, displace, and diminish civilian populations. Disasters are not only physically damaging to the communities but also have a major economic impact. In 2017 alone, there were 301 disasters and, on average, 60,000 deaths per year attributed to natural disasters. In 2017, North America suffered an economic loss of \$244 billion dollars due to natural disasters [Insert Reference]. Over the past century, the rate at which these catastrophes occur has skyrocketed. Since global climate change is a large contributor to the increasing rate of disasters, the upward trend in the number of natural disasters is likely to continue.
     % Here I could add a bit about the SCU Jesuit values and helping the "global" community
 At Santa Clara University, as Jesuits, we are expected to uphold considerable moral values. The most important being service to others. Jesuits are encouraged to consider actions that can better the lives of others less fortunate than themselves, as Jesus did in his time. For our project, we tried to create a service that would benefit victims and disaster-response teams alike. 
+
+\section{Problem Statement}
+% Problem statement: Make a concise statement of the problem, ideally in a few sentences, but no more than a paragraph. For example, try to complete this statement: “The sponsor desires that ... (insert goals of the project) ... subject to the following criteria: ... (insert numbered list).” These goals and criteria help to define the scope of work and the deliverables.
+% PROBLEM = disaster response technology is expensive / not accessible by developing countries and NGOs.
+
+Commercial UAV-based disaster response technology is cost prohibitive and therefore it is not accessible by non-governmental organizations and developing countries. This is problematic as natural and human-caused disasters are often more devastating to developing countries and low-income areas. 
+
+%ADD IN: For example, (Insert example of how a high-income area is able to respond to a disaster more easily)
+
+A natural disaster that occurs in the US will have a more collaborative and expensive response turnout, compared to a lesser-developed country. In the US, relief teams, funds, and problem solving are all strategized by the Department of the Interior~\cite{interiorjob}. Besides designating federal funds, the department also organizes expenses through local, state, territorial, and stakeholders. On top of this are advanced technology like manned aircraft and strong communication infrastructure. If needed, other developed countries never fail to send funds, as they have in the past for the many hurricanes that have ravaged the south. The benefits listed diminish in scale the more underdeveloped the country is. It is understandable how an earthquake at the magnitude of Haiti’s would result in way less losses if it occurred in the US. 
+
+\section{Related Work}
+% Background or Related Work: State who else has worked on this problem or similar problems (you should do most of your citations here). For applied projects, provide information on other existing programs which will use your program.
+In creating our solution, we decided to draw inspiration from other studies already produced in the field of object detection and computer vision. By doing extensive research on other projects, we were able to narrow down on the best dataset to use as well. 
+
+In the first project we looked at, we discovered the company Nanonets that specializes in making convolutional neural networks for aerial drones~\cite{nanotech}. As it turns out, drones are used for a variety of industry applications such as surveillance over solar panel farms, monitoring progress in construction projects, and various other cases. We were able to gather some information about the algorithms used but could not apply it heavily to our project as they didn’t have any written documentation on human detection. 
+
+A larger scale project we found was one from a Microsoft team, which created a drone system of manned aerial vehicles (MAVs) to persistently track one individual~\cite{monocularmav}. It could be for the purposes of tracking or other security-based applications. Like our project, the Microsoft team implemented an approach that avoided performing detection on every frame, and instead, focused on creating a performance-effective pattern detection hypothesis on frames which, if deemed to be important, would then have detection performed on the relevant frames. We followed this approach since applying detection per frame for our system would be very power intensive, and disallow for longer flight times or the redirection of power to our embedded systems. 
+
+An important related work in our process to finding a reliable imaging dataset was a paper by which outlined different available training datasets for projects that could not afford the time or means to create their own~~\cite{datasets}. In the article are many notable examples like Haar Cascade and MobileNet. It dives into the differences and similarities between the two, the situations where one is better than the other, and implementation required. % TODO write something technical here to finish up this paragraph about our dataset>.
+
+We also searched and compared various drone hardware designs to find the best approach to how to create our drone. We were able to recognize that creating a low-cost drone could be achieved after looking into the work by a group of students from Indiana University~\cite{indianauav}. The team was able to create a cheaper \$300 drone with a 1GHz CPU and two front-facing cameras, and still support an average computer vision model. 
+% 
+% \section{Objectives}
+% Objectives: The objectives are a battle plan for the project. They are a breakdown of steps or accomplishments that must be completed to achieve the project goals.
+
 
 \subsection{UAV-Based Recovery}
 % S2: Introduction on drone based recovery
@@ -16,14 +41,6 @@ Unmanned aerial vehicles, or UAVs, are used as technological solutions to increa
 
 %Developing countries and non-governmental organizations need access to affordable disaster response technology. Currently,
 
-\subsection{Problem}
-% PROBLEM = disaster response technology is expensive / not accessible by developing countries and NGOs.
-
-Commercial UAV-based disaster response technology is cost prohibitive and therefore it is not accessible by non-governmental organizations and developing countries. This is problematic as natural and human-caused disasters are often more devastating to developing countries and low-income areas. 
-
-%ADD IN: For example, (Insert example of how a high-income area is able to respond to a disaster more easily)
-
-A natural disaster that occurs in the US will have a more collaborative and expensive response turnout, compared to a lesser-developed country. In the US, relief teams, funds, and problem solving are all strategized by the Department of the Interior. Besides designating federal funds the department also organizes expenses through local, state, territorial, and stakeholders. On top of this is advanced technology like manned aircraft and strong communication infrastructure. If needed, other developed countries never fail to send funds, as they have in the past for the many hurricanes that have ravaged the south. The benefits listed diminish in scale the more underdeveloped the country is. It is understandable how an earthquake at the magnitude of Haiti’s would result in way less losses. 
 
 \subsection{Challenges}
 % A bit confused by this section!
@@ -33,7 +50,6 @@ A natural disaster that occurs in the US will have a more collaborative and expe
 The COVID-19 pandemic has been the largest challenge for our group. Each group member had to be isolated for the duration of this project. This meant that we could not hold in-person meetings and therefore we were less productive when troubleshooting hardware or software issues. Furthermore, the lack of in person interaction meant we couldn’t just walk into our project advisor’s office and ask for help. 
 
     \subsubsection{Testing}
-    
 
 On the topic of testing, we quickly ran into problems flying our drone. Due to city regulations, a permit must be first acquired before users are allowed to fly a drone at any altitude. Moreover, the school was unable to accommodate any exceptions to the restrictions which created a major setback to our project. We originally planned on creating our own test data and turning to an imaging dataset to fill in the gaps to what our testing could not provide. Now, we had to completely rely on an aerial imaging dataset for our model. 
 
@@ -42,18 +58,16 @@ On the topic of testing, we quickly ran into problems flying our drone. Due to c
 Before we were limited to only indoor spaces by city regulations, we performed tests in a local park. During one of our runs, we had a slight malfunction from one of our motors which stopped midair. Since this was during our preliminary testing stages, we hadn’t coded error handling into our drone, so the drone fell almost 12 feet out of the air. While the drone did land relatively softly on the grass, the motor sustained considerable damage and needed to be sent back to the manufacturer for repairs. 
 A more significant challenge we faced all throughout development was ensuring our battery would be sufficient in powering all our electronics. Throughout the project, we were constantly monitoring whether our power consumption was optimal and not surpassing the wattage required for the other team’s hardware to work properly. 
 
-
     \paragraph{Holybro S500}
 
 
 %S3: SOLUTION = creating low-cost alternatives to UAV-based disaster recovery
 \subsection{Solution}
 % P5: your proposed solution [Our part of the project]
-We will create a low-cost UAV-based solution to assist in disaster response. The novelty of our solution is the emphasis on frugal innovation such that our relatively low-cost product will be a realistic option for developing countries and humanitarian organizations. Something about design thinking ? 
-
+We created a low-cost UAV-based solution to assist in disaster response. The novelty of our solution is the emphasis on frugally designing an innovative and relatively low-cost product that will be a realistic option for developing countries and humanitarian organizations. 
 
 % P6: the role of wireless communication in this application [Solution continued]
-Throughout this project we will also be working in parallel with another group consisting of two members Mark Rizko and Cameron Burdsall. Mark and Cameron are working to create a drone mesh WiFi system for disaster scenarios. When both projects have been completed, we will combine the technologies to create a more complete solution for disaster recovery. Our combined cost-effective solution will have the capabilities to assist in safely identifying victim locations, and resurrecting destroyed communication infrastructure.
+Throughout this project we will also be working in parallel with another group consisting of two members Cameron Burdsall and Mark Rizko. Cameron and Mark are working to create a drone mesh WiFi system for disaster scenarios. When both projects have been completed, we will combine the technologies to create a more complete solution for disaster recovery. Our combined cost-effective solution will have the capabilities to assist in safely identifying victim locations, and resurrecting destroyed communication infrastructure.
 
 \subsection{Evaluation Results}
 % P7: evaluation results
